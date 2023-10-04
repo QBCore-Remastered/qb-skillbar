@@ -1,5 +1,3 @@
-local QBCore = exports['qbx-core']:GetCoreObject()
-
 Skillbar = {}
 Skillbar.Data = {}
 Skillbar.Data = {
@@ -46,7 +44,7 @@ Skillbar.Start = function(data, success, fail)
         })
         TriggerEvent('progressbar:client:ToggleBusyness', true)
     else
-        QBCore.Functions.Notify('Your already doing something..', 'error')
+        exports.qbx_core:Notify('Your already doing something..', 'error')
     end
 end
 
